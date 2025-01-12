@@ -1,0 +1,2249 @@
+body {body {
+    margin: 0;
+    font-family: "Alegreya Sans", sans-serif;
+    background-color: rgb(242, 242, 230);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+
+
+
+h1, h2, h3, p, a, button, input, label {
+    font-family: "Alegreya Sans", sans-serif; /* Assegura consistència */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.9rem;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+
+.container {
+    max-width: 1100px; /* Amplada màxima del contingut */
+    margin: 0 auto; /* Centra el contingut */
+    padding: 0 280px !important;
+}
+
+
+
+
+.header {
+    background-color: rgb(255, 255, 255); /* Fons beix */
+    padding: 20px 80px; /* Espai intern */
+    display: flex; /* Flexbox per alinear els elements */
+    justify-content: space-between; /* Logotip a l'esquerra, menú a la dreta */
+    align-items: center; /* Alineació vertical centrada */
+    box-sizing: border-box;
+}
+
+
+
+
+/* Logotip */
+.header .logo {
+    flex-shrink: 0; /* El logotip no es redueix */
+}
+
+
+
+
+.header .logo img {
+    max-height: 25px; /* Mida del logotip */
+    display: block;
+}
+
+
+
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: px; /* Espai entre els enllaços */
+}
+
+.header .nav a {
+    text-transform: uppercase; /* Converteix el text a majúscules */
+    font-weight: bold; /* Aplica negreta */
+    font-size: 0.9rem; /* Ajusta la mida de la lletra una mica més petita */
+    text-decoration: none; /* Elimina la subratllat inicial */
+}
+
+.header .nav a:not(:last-child)::after {
+    content: ""; /* Crea una línia separadora */
+    display: inline-block;
+    width: 1px; /* Amplada de la línia */
+    height: 1em; /* Ajusta l'alçada de la línia perquè coincideixi amb el text */
+    background-color: black; /* Color de la línia */
+    margin: 0 10px; /* Espai a banda i banda de la línia */
+    vertical-align: middle; /* Centra la línia respecte al text */
+}
+
+
+.header .nav a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+
+
+.logo img {
+    max-height: 50px;
+}
+
+
+
+
+.nav a {
+    margin-left: 15px; /* Espai entre els enllaços */
+    font-size: 0.9rem; /* Redueix la mida del text */
+    color: rgb(0, 0, 0); /* Text negre */
+    text-decoration: none; /* Sense subratllat */
+}
+
+
+
+
+.nav a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+a {
+    color: black; /* Tots els enllaços en negre */
+    text-decoration: underline; /* Afegir subratllat */
+}
+
+a:hover {
+    color: rgb(64, 195, 130); /* Manté el negre en hover */
+    text-decoration: underline; /* Manté el subratllat en hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+
+
+
+.hero-text h1 {
+    font-size: 3rem; /* Font més gran per a la titular */
+    margin: 0;
+}
+
+
+
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+
+
+.about {
+    display: flex;
+    justify-content: space-between; /* Separa el text i el formulari */
+    align-items: flex-start; /* Alineació superior */
+    gap: 40px; /* Espai entre el text i el formulari */
+    margin: 50px 0;
+    margin-top: 0;
+    display: flex;
+}
+
+
+
+
+.about-text {
+    flex: 3; /* Dona més espai al text */
+    font-size: 1rem; /* Mida del text */
+    line-height: 1.8;
+}
+
+
+
+
+.subscribe-form {
+    flex: 2; /* Dona menys espai al formulari */
+    padding: 0; /* Elimina espai innecessari */
+    background-color: transparent; /* Fons transparent */
+    border: none; /* Elimina qualsevol vora */
+    box-shadow: none; /* Sense ombra */
+    margin-top: 4.2rem;
+}
+
+
+
+.subscribe-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+
+.subscribe-form input,
+.subscribe-form button {
+    width: 100%; /* Manté l'amplada completa */
+    margin-bottom: 15px;
+    padding: 10px; /* Espai intern adequat */
+    border: 1px solid rgb(242, 242, 230); /* Vora subtil */
+    border-radius: 5px; /* Lleugera curvatura */
+    background-color: rgb(255, 255, 255); /* Fons només per als camps */
+}
+
+
+
+.subscribe-form input:focus {
+    border-color: rgb(0, 0, 0); /* Vora negra en focus */
+    outline: none; /* Elimina el contorn blau */
+}
+
+
+.subscribe-form button {
+    background-color: transparent; /* Fons transparent */
+    color: rgb(0, 0, 0); /* Text negre */
+    border: 1px solid rgb(0, 0, 0); /* Vora negra */
+    cursor: pointer;
+    font-size: 0.9rem; /* Text més petit */
+    padding: 5px 10px; /* Mida compacta */
+    border-radius: 0; /* Botó quadrat */
+    width: auto; /* Amplada automàtica */
+    height: auto; /* Alçada automàtica */
+}
+
+
+
+.subscribe-form button:hover {
+    background-color: rgb(64, 195, 130); /* Fons verd en hover */
+    color: rgb(255, 255, 255); /* Text blanc en hover */
+    border-color: rgb(64, 195, 130); /* Vora verda en hover */
+}
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espai entre el checkbox i el text */
+    font-size: 0.9rem;
+}
+
+
+
+.privacy-message {
+    font-size: 0.6rem; /* Mida més petita */
+    color: rgb(0, 0, 0); /* Color negre */
+    margin-bottom: 15px; /* Espai sota el text */
+    line-height: 1.4; /* Compacte però llegible */
+}
+
+
+/* Enllaç a la política de privacitat */
+.privacy-link {
+    text-decoration: underline; /* Subratllat */
+    color: rgb(0, 0, 0); /* Color negre per l'enllaç */
+}
+
+
+.privacy-link:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+
+.checkbox-container input {
+    width: auto; /* Ajusta la mida del checkbox */
+}
+
+
+
+.stories {
+    margin: 120px 0; /* Espai ampli entre seccions */
+    padding: 0 150px; /* Marges laterals grans per la coherència */
+    font-size: 1rem; /* Mida del text */
+}
+
+
+
+.stories h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+
+
+
+.stories p {
+    margin-bottom: 40px; /* Augmenta l'espai sota el text explicatiu */
+}
+
+
+
+
+h2 {
+font-size: 2rem; /* Mateixa mida que el títol principal */
+font-weight: bold; /* Text destacat */
+color: rgb(0, 0, 0); /* Text negre */
+margin-bottom: 20px; /* Espai inferior igual */
+line-height: 1.4; /* Per llegibilitat */
+}
+
+
+
+
+.container {
+	max-width: 1200px; /* Define a fixed maximum width */
+	padding: 20px; /* Add some padding for spacing */
+}
+
+
+.stories-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnes iguals */
+    gap: 20px; /* Redueix l'espai entre les targetes */
+    padding: 0; /* Elimina els marges laterals */
+    margin: 0 auto; /* Centra el contingut */
+    max-width: 100%; /* Permet que les targetes ocupin tot l'ample */
+}
+
+
+.card {
+	background-color: rgb(255, 255, 255);
+	border-radius: 4px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 350px; /* Fixed height for all cards */
+}
+
+
+.card img {
+	width: 100%;
+	height: 150px; /* Fixed height for images */
+	object-fit: cover; /* Image covers the area */
+}
+
+
+.card h3 {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 10px 15px;
+	line-height: 1.4;
+}
+
+
+.card p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 15px;
+	flex: 1; /* Let the text occupy remaining space */
+}
+
+
+.card a {
+	margin: 15px;
+	padding: 8px 15px;
+	color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 4px;
+	text-decoration: none;
+	align-self: flex-start;
+}
+
+
+.card a:hover {
+	background-color: rgb(64, 195, 130);
+	color: rgb(255, 255, 255);
+}
+
+/* Targetes del blog */
+.blog-container .stories-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnes iguals */
+    gap: 30px; /* Ajusta l'espai entre les targetes */
+    padding: 0; /* Elimina els marges laterals */
+    margin: 0 auto; /* Centra les targetes a la pantalla */
+    width: 100%; /* Redueix l'amplada per semblar-se al mockup */
+    max-width: 1280px; /* Amplada màxima basada en el mockup */
+}
+
+.blog-container .card {
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Alinea el contingut verticalment */
+    height: 500px; /* Redueix l'alçada per semblar-se al mockup */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra subtil */
+}
+
+.blog-container .card img {
+    width: 100%; /* Amplada completa */
+    height: auto; /* Ajusta automàticament l'alçada segons la imatge */
+    object-fit: cover; /* Les imatges cobreixen completament l'espai assignat */
+    margin-bottom: 5px;
+    border-radius: 0; /* Elimina qualsevol cantonada arrodonida de la imatge */
+}
+
+.blog-container .card h3 {
+    font-size: 1.2rem; /* Augmenta lleugerament la mida del títol */
+    font-weight: bold;
+    margin: 0 15px 5px 5px;
+    line-height: 1.4;
+}
+
+.blog-container .card p {
+    font-size: 0.9rem; /* Ajusta la mida del text */
+    margin: 0 5px 5px 5px; /* Ajusta els marges del text */
+    line-height: 1.6; /* Espaiat entre línies */
+}
+
+.blog-container .card a {
+    margin: 15px;
+    padding: 10px;
+    background-color: transparent; /* Fons transparent */
+    color: black; /* Color del text negre */
+    text-decoration: none; /* Sense subratllat */
+    text-align: center;
+    border: 1px solid black; /* Vora negra */
+    border-radius: 0px; /* Cantonades arrodonides */
+    font-size: 1rem; /* Mida del text de l'enllaç */
+    display: inline-block;
+    transition: all 0.3s ease; /* Transició suau */
+}
+
+.blog-container .card a:hover {
+    background-color: transparent; /* Manté el fons transparent */
+    color: black; /* Manté el text negre */
+    border-color: rgb(64, 195, 130); /* Vora verda en hover */
+}
+
+/* Títol del blog */
+.blog-container h1 {
+    text-align: center; /* Centra el text */
+    font-size: 3rem; /* Augmenta la mida del text */
+    margin: 20px auto; /* Espai a dalt i a baix i centra el títol */
+    font-weight: bold; /* Fa el text en negreta */
+}
+
+/* Ajustos de pàgina */
+.blog-container .pagination {
+    display: flex;
+    justify-content: center; /* Centra la paginació */
+    margin-top: 20px; /* Espai a sobre de la paginació */
+}
+
+.blog-container .page-link {
+    margin: 0 5px; /* Espai entre els enllaços de la pàgina */
+    padding: 5px 10px; /* Espai intern dels enllaços */
+    color: rgb(0, 0, 0); /* Color del text negre */
+    text-decoration: none; /* Sense subratllat */
+    border: 1px solid transparent; /* Vora transparent */
+    transition: all 0.2s; /* Transició suau per hover */
+}
+
+.blog-container .page-link:hover,
+.blog-container .page-link:focus {
+    border-color: rgb(0, 0, 0); /* Vora negra en hover/focus */
+}
+
+.blog-container .page-link.active {
+    background-color: rgb(64, 195, 130); /* Fons verd per a l'enllaç actiu */
+    color: white; /* Text blanc per a l'enllaç actiu */
+    border-color: rgb(64, 195, 130); /* Vora verda per a l'enllaç actiu */
+}
+
+
+.post-image {
+    width: 100vw; /* Amplada completa de la finestra del navegador */
+    height: 300px; /* Alçada fixa */
+    overflow: hidden; /* Retalla l'excés */
+    margin: 0 auto; /* Centra la imatge */
+    position: relative; /* Relativa per ajustar el contingut */
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manté proporcions de la imatge */
+    display: block;
+}
+
+.post-image figcaption {
+    text-align: center; /* Centra el text del peu de foto */
+    font-size: 0.9rem; /* Mida del text més petita */
+    color: #666; /* Color gris per al text */
+    margin-top: 10px; /* Espai entre la imatge i el peu de foto */
+}
+
+main.post-container {
+    max-width: 1200px; /* Amplada màxima */
+    margin: 0 auto; /* Centra el contenidor principal */
+    padding: 0 40px; /* Espai lateral */
+    text-align: left; /* Alinea tot el text a l'esquerra */
+}
+
+main.post-container > * {
+    margin-left: 0 !important;
+    text-align: left !important; /* Alinea text a l'esquerra */
+}
+
+/* Ajustos específics per a la imatge */
+main.post-container .post-image {
+    width: 100%; /* Amplada completa */
+    height: 300px; /* Alçada fixa per semblar-se al mockup */
+    overflow: hidden; /* Retalla qualsevol excés */
+}
+
+main.post-container .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manté les proporcions */
+}
+
+/* Ajust per als paràgrafs */
+main.post-container p {
+    margin: 0 0 30px 0; /* Espai inferior però elimina marges laterals */
+    text-align: left;
+}
+
+
+
+
+body.post-container main p {
+    margin: 0 0 15px 0 !important; /* Elimina marges laterals i ajusta marges inferiors */
+    text-align: left !important; /* Alinea tot el text a l'esquerra */
+}
+
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: rgb(0, 0, 0); /* Fons negre */
+    color: rgb(255, 255, 255); /* Text blanc */
+    padding: 20px 0; /* Espai intern */
+    width: 100%; /* Amplada completa */
+    box-sizing: border-box; /* Inclou el padding dins de l'amplada */
+}
+
+
+
+
+.footer-content {
+    max-width: 1250px; /* Amplada màxima del contingut */
+    margin: 0 auto; /* Centra el contingut dins del footer */
+    display: flex; /* Organitza el contingut amb Flexbox */
+    justify-content: space-between; /* Separa logotip i enllaços */
+    align-items: center; /* Alineació vertical centrada */
+    padding: 0 20px; /* Espai lateral */
+}
+
+
+
+
+.footer-logo {
+    flex-shrink: 0; /* Evita que el logotip es redueixi */
+    margin-left: 0; /* Logotip completament a l'esquerra */
+    padding: 0; /* Elimina qualsevol padding */
+}
+
+
+
+
+.footer-logo img {
+    max-height: 20px; /* Ajusta la mida del logotip */
+    display: block;
+}
+
+
+
+
+/* Navegació */
+.footer-nav {
+    margin-left: auto; /* Envia els enllaços completament a la dreta */
+    display: flex;
+    gap: 15px; /* Espai uniforme entre enllaços */
+}
+
+
+
+
+.footer-nav a {
+    color: rgb(255, 255, 255); /* Text blanc */
+    text-decoration: none; /* Sense subratllat */
+    font-size: 0.9rem; /* Mida compacta */
+}
+
+
+
+
+.footer-nav a:hover {
+    color: rgb(64, 195, 130); /* Canvi a verd en hover */
+}
+
+
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: left; /* Manté el text alineat a l'esquerra */
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: rgb(255, 255, 255); /* Text blanc */
+    padding-left: 50px; /* Espai per alinear-se amb el contingut */
+}
+
+
+
+
+.footer-icons {
+    display: flex; /* Col·loca els icones en línia */
+    justify-content: flex-end; /* Alinea els icones a la dreta */
+    gap: 15px; /* Espai entre els icones */
+    margin-bottom: 10px;
+    height: auto; /* Evita que el contenidor amagui els icones */
+    overflow: visible;
+}
+
+
+
+
+.footer-icons a img {
+    width: 24px; /* Mida fixa dels icones */
+    height: 24px;
+    display: inline-block; /* Assegura que es mostrin correctament */
+    filter: invert(100%); /* Fa els icones blancs sobre fons negre */
+    transition: opacity 0.3s ease; /* Transició suau per hover */
+    visibility: visible; /* Assegura la visibilitat */
+    opacity: 1; /* Assegura que no són transparents */
+}
+
+
+
+
+.footer-icons a:hover img {
+    opacity: 0.7; /* Canvi d'opacitat en hover */
+}
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: flex-end; /* Alinea els enllaços a la dreta */
+    align-items: center;
+    gap: 10px; /* Espai entre enllaços i separadors */
+}
+
+
+
+
+.footer-links a {
+    color: rgb(255, 255, 255); /* Text blanc */
+    text-decoration: none; /* Sense subratllat */
+    font-size: 0.9rem; /* Mida compacta */
+}
+
+
+
+
+.footer-links a:hover {
+    color: rgb(64, 195, 130); /* Canvi a verd en hover */
+}
+
+
+
+
+/* Separador entre enllaços */
+.footer-links .separator {
+    color: rgb(255, 255, 255); /* Línies blanques */
+    font-size: 0.9rem;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.alegreya-sans-regular {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+  .alegreya-sans-bold {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+ 
+  .alegreya-sans-regular-italic {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+ 
+  .alegreya-sans-bold-italic {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+
+
+  .topic-hero {
+    background-color: rgb(242, 242, 230);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+
+
+.topic-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+.topic-hero h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+
+
+
+.topic-main { 
+display: flex; /* Flexbox per alinear menú i contingut */ gap: 20px; /* Espai entre menú i contingut */ }
+
+
+
+
+/* Tema del mes - Navigation Menu */
+.topic-menu {
+    text-align: left;
+    font-size: 0.9rem;
+    width: 150px;
+    margin-top: -10px;
+}
+
+
+.topic-menu ul li {
+    margin-bottom: 1px; /* Espai entre els elements del menú */
+}
+
+
+.green-box {
+    background-color: rgb(64, 195, 130); /* Color verd */
+    color: white; /* Text en blanc dins el quadrat */
+    width: auto; /* Ajusta automàticament segons el contingut */
+    height: auto; /* Ajusta automàticament segons el contingut */
+    padding: 5px; /* Espai intern uniforme */
+    display: inline-block;
+    font-weight: bold;
+    text-align: center; /* Centra el text */
+    border-radius: 0; /* Cantonades puntiagudes */
+}
+
+
+.topic-menu ul {
+    margin-top: 0;
+    line-height: 0.7;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Elimina punts del menú */
+    top: -0px; /* Mou el menú una mica més amunt */
+}
+
+
+
+.topic-menu ul li a {
+    display: block; /* Cada enllaç ocupa una línia completa */
+    padding: 5px 10px; /* Espai dins dels enllaços */
+    text-decoration: none; /* Elimina el subratllat */
+    color: black;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+
+
+
+.topic-menu ul li a:hover {
+    color: rgb(64, 195, 130); /* Verd en hover */
+    background-color: rgba(64, 195, 130, 0.1); /* Fons verd clar en hover */
+}
+
+
+.topic-details {
+    margin-left: 40px;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+
+
+.topic-content {
+    display: grid;
+    grid-template-columns: 150px 1fr 2fr; /* Definim la mida de les columnes */
+    align-items: start; /* Alinea tot al top */
+    gap: 20px; /* Espai entre columnes */
+    margin-top: 20px;
+}
+
+
+
+
+
+.topic-content article {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+
+
+.topic-content article img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.topic-content article h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+
+
+
+.topic-content article p {
+    margin: 5px 0;
+}
+
+
+
+
+.topic-content article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+
+
+
+.topic-content article a:hover {
+    background-color: rgb(64, 195, 130);
+    color: white;
+}
+
+
+
+
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Center pagination */
+    margin-top: 20px; /* Space above pagination */
+}
+
+
+
+
+.page-link {
+    margin: 0 5px; /* Space between page links */
+    padding: 5px 10px; /* Padding for page links */
+    color: rgb(0, 0, 0); /* Black text */
+    text-decoration: none; /* No underline */
+    border: 1px solid transparent; /* Transparent border */
+    transition: all 0.2s; /* Smooth transition for hover */
+}
+
+
+
+
+.page-link:hover,
+.page-link:focus {
+    border-color: rgb(0, 0, 0); /* Black border on hover/focus */
+}
+
+
+
+
+.page-link.active {
+    background-color: rgb(64, 195, 130); /* Active link background */
+    color: white; /* Active link text color */
+    border-color: rgb(64, 195, 130); /* Active link border */
+}
+
+
+/* Títol i estat de conservació */
+.title-block {
+    margin-bottom: 15px; /* Espai entre el títol/estat i la resta */
+}
+
+
+.title-block h3 {
+    font-size: 1.8rem; /* Proporció adequada per al títol */
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.title-block .status {
+    font-size: 1.2rem; /* Mida per al text de l'estat */
+    font-style: italic; /* Estil cursiva */
+    color: rgb(0, 0, 0); /* Color negre */
+    margin: 5px 0 0; /* Petit espai entre títol i estat */
+}
+
+
+/* Contingut de l'animal */
+.animal-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+
+
+
+.animal-details figure {
+    text-align: center; /* Centra la imatge i el peu de foto */
+    margin: 0;
+}
+
+
+.animal-details figcaption {
+    font-size: 0.85rem; /* Redueix lleugerament la mida del text del peu */
+    color: rgb(0, 0, 0);
+    line-height: 1.4;
+}
+
+
+.animal-details figcaption a {
+    color: rgb(0, 0, 0); /* Enllaç negre */
+    text-decoration: underline; /* Subratllat per indicar enllaç */
+}
+
+
+.animal-details figcaption a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en passar el ratolí */
+}
+
+
+.animal-details img {
+    max-width: 250px; /* Amplada màxima */
+    height: auto; /* Manté la proporció */
+    border: 1px solid rgb(0, 0, 0); /* Borde negre */
+}
+
+
+.animal-details .description {
+    flex: 1; /* La descripció ocupa l'espai restant */
+    line-height: 1.6; /* Millora la llegibilitat */
+}
+
+
+.animal-details .description p {
+    line-height: 1.6; /* Millora la llegibilitat */
+    margin-bottom: 10px; /* Espai sota el text */
+}
+
+
+.animal-details .read-more {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+
+.animal-details .read-more:hover {
+    background-color: rgb(64, 195, 130);
+    color: white;
+}
+
+
+.animal-info {
+    flex: 1;
+}
+
+
+
+
+.animal-image-container p {
+    margin: 0; /* Elimina marges innecessaris heretats de les regles generals */
+    text-align: center;
+    padding: 0; /* Elimina possibles farcits que afegeixin espai addicional */
+    line-height: 1.4; /* Ajusta l'alçada de línia per a una millor llegibilitat */
+}
+
+
+
+
+.animal-block h3 {
+    font-size: 1.6rem; /* Mida del títol */
+    font-weight: bold;
+    margin-bottom: 5px; /* Espai sota el títol */
+}
+
+
+.animal-block .status {
+    font-size: 1.2rem; /* Proporció adequada per al text */
+    font-style: italic; /* Destaquem l'estil de l'estat */
+    color: rgb(0, 0, 0); /* Text negre */
+    margin-bottom: 15px; /* Espai sota l'estat */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Media query per tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajustar marges generals */
+    body {
+        padding: 20px;
+    }
+
+
+
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between; /* Menu i logotip separats */
+        align-items: center;
+    }
+
+
+
+
+    header nav {
+        display: flex;
+        gap: 15px;
+    }
+
+
+
+
+    .hero {
+        height: 250px; /* Redueix l'alçada */
+    }
+   
+
+
+
+
+    /* Secció "Què és Naturae Hub?" */
+    .main-section {
+        display: flex;
+        flex-direction: column; /* Contingut apilat verticalment */
+        gap: 20px; /* Espai entre les columnes */
+    }
+
+
+
+
+    .main-section .form-container {
+        width: 100%; /* Formulari ocupa tota l'amplada */
+    }
+
+
+
+
+    /* Secció "Històries de canvi" */
+    .stories-cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Columnes simples */
+        gap: 20px; /* Espai entre els quadrats */
+    }
+
+
+
+
+    .stories-cards .card {
+        padding: 15px; /* Redueix padding per fer-los més compactes */
+    }
+
+
+
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column; /* Contingut apilat */
+        align-items: center; /* Centrat */
+        gap: 20px;
+    }
+
+
+
+
+    .footer-icons {
+        justify-content: center; /* Icones centrades */
+        gap: 15px;
+    }
+
+
+
+
+    .footer-links {
+        justify-content: center; /* Enllaços centrats */
+    }
+
+
+
+
+    .footer-bottom {
+        text-align: center; /* Text centrat */
+    }
+}
+    margin: 0;
+    font-family: "Alegreya Sans", sans-serif;
+    background-color: rgb(242, 242, 230);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+
+
+
+h1, h2, h3, p, a, button, input, label {
+    font-family: "Alegreya Sans", sans-serif; /* Assegura consistència */
+}
+
+
+
+
+.container {
+    max-width: 1100px; /* Amplada màxima del contingut */
+    margin: 0 auto; /* Centra el contingut */
+    padding: 0 280px !important;
+}
+
+
+
+
+.header {
+    background-color: rgb(255, 255, 255); /* Fons beix */
+    padding: 20px 80px; /* Espai intern */
+    display: flex; /* Flexbox per alinear els elements */
+    justify-content: space-between; /* Logotip a l'esquerra, menú a la dreta */
+    align-items: center; /* Alineació vertical centrada */
+    box-sizing: border-box;
+}
+
+
+
+
+/* Logotip */
+.header .logo {
+    flex-shrink: 0; /* El logotip no es redueix */
+}
+
+
+
+
+.header .logo img {
+    max-height: 25px; /* Mida del logotip */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.header .nav a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+
+
+.logo img {
+    max-height: 50px;
+}
+
+
+
+
+.nav a {
+    margin-left: 15px; /* Espai entre els enllaços */
+    font-size: 0.9rem; /* Redueix la mida del text */
+    color: rgb(0, 0, 0); /* Text negre */
+    text-decoration: none; /* Sense subratllat */
+}
+
+
+
+
+.nav a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+
+
+
+.hero-text h1 {
+    font-size: 3rem; /* Font més gran per a la titular */
+    margin: 0;
+}
+
+
+
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+
+
+.about {
+    display: flex;
+    justify-content: space-between; /* Separa el text i el formulari */
+    align-items: flex-start; /* Alineació superior */
+    gap: 40px; /* Espai entre el text i el formulari */
+    margin: 50px 0;
+    margin-top: 0;
+    display: flex;
+}
+
+
+
+
+.about-text {
+    flex: 3; /* Dona més espai al text */
+    font-size: 1rem; /* Mida del text */
+    line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.subscribe-form {
+    flex: 2; /* Dona menys espai al formulari */
+    padding: 0; /* Elimina espai innecessari */
+    background-color: transparent; /* Fons transparent */
+    border: none; /* Elimina qualsevol vora */
+    box-shadow: none; /* Sense ombra */
+    margin-top: 4.2rem;
+}
+
+
+
+
+.subscribe-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+
+
+.subscribe-form input,
+.subscribe-form button {
+    width: 100%; /* Manté l'amplada completa */
+    margin-bottom: 15px;
+    padding: 10px; /* Espai intern adequat */
+    border: 1px solid rgb(242, 242, 230); /* Vora subtil */
+    border-radius: 5px; /* Lleugera curvatura */
+    background-color: rgb(255, 255, 255); /* Fons només per als camps */
+}
+
+
+
+
+.subscribe-form input:focus {
+    border-color: rgb(0, 0, 0); /* Vora negra en focus */
+    outline: none; /* Elimina el contorn blau */
+}
+
+
+
+
+.subscribe-form button {
+    background-color: transparent; /* Fons transparent */
+    color: rgb(0, 0, 0); /* Text negre */
+    border: 1px solid rgb(0, 0, 0); /* Vora negra */
+    cursor: pointer;
+    font-size: 0.9rem; /* Text més petit */
+    padding: 5px 10px; /* Mida compacta */
+    border-radius: 0; /* Botó quadrat */
+    width: auto; /* Amplada automàtica */
+    height: auto; /* Alçada automàtica */
+}
+
+
+
+
+.subscribe-form button:hover {
+    background-color: rgb(64, 195, 130); /* Fons verd en hover */
+    color: rgb(255, 255, 255); /* Text blanc en hover */
+    border-color: rgb(64, 195, 130); /* Vora verda en hover */
+}
+
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espai entre el checkbox i el text */
+    font-size: 0.9rem;
+}
+
+
+
+
+.privacy-message {
+    font-size: 0.6rem; /* Mida més petita */
+    color: rgb(0, 0, 0); /* Color negre */
+    margin-bottom: 15px; /* Espai sota el text */
+    line-height: 1.4; /* Compacte però llegible */
+}
+
+
+
+
+/* Enllaç a la política de privacitat */
+.privacy-link {
+    text-decoration: underline; /* Subratllat */
+    color: rgb(0, 0, 0); /* Color negre per l'enllaç */
+}
+
+
+
+
+.privacy-link:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en hover */
+}
+
+
+
+
+.checkbox-container input {
+    width: auto; /* Ajusta la mida del checkbox */
+}
+
+
+
+
+.stories {
+    margin: 120px 0; /* Espai ampli entre seccions */
+    padding: 0 150px; /* Marges laterals grans per la coherència */
+    font-size: 1rem; /* Mida del text */
+}
+
+
+
+
+.stories h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+
+
+
+.stories p {
+    margin-bottom: 40px; /* Augmenta l'espai sota el text explicatiu */
+}
+
+
+
+
+h2 {
+font-size: 2rem; /* Mateixa mida que el títol principal */
+font-weight: bold; /* Text destacat */
+color: rgb(0, 0, 0); /* Text negre */
+margin-bottom: 20px; /* Espai inferior igual */
+line-height: 1.4; /* Per llegibilitat */
+}
+
+
+
+
+.stories-cards {
+    display: flex;
+    gap: 30px; /* Separació més ampla entre targetes */
+    justify-content: space-between;
+
+
+
+
+}
+
+
+
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Les targetes ocupen el mateix espai */
+    text-align: left;
+}
+
+
+
+
+.card h3 {
+    font-size: 1.3rem; /* Mida més petita */
+    font-weight: bold; /* Manté la lletra destacada */
+    margin-bottom: 10px; /* Espai inferior ajustat */
+    line-height: 1.4; /* Ajust de llegibilitat */
+}
+
+
+
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px 15px;
+    border-radius: 0px;
+    text-decoration: none;
+}
+
+
+
+
+.card a:hover {
+    background-color: rgb(64, 195, 130);
+    color: rgb(255, 255, 255);
+}
+
+.learn-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: rgb(0, 0, 0); /* Fons negre */
+    color: rgb(255, 255, 255); /* Text blanc */
+    padding: 20px 0; /* Espai intern */
+    width: 100%; /* Amplada completa */
+    box-sizing: border-box; /* Inclou el padding dins de l'amplada */
+}
+
+
+
+
+.footer-content {
+    max-width: 1250px; /* Amplada màxima del contingut */
+    margin: 0 auto; /* Centra el contingut dins del footer */
+    display: flex; /* Organitza el contingut amb Flexbox */
+    justify-content: space-between; /* Separa logotip i enllaços */
+    align-items: center; /* Alineació vertical centrada */
+    padding: 0 20px; /* Espai lateral */
+}
+
+
+
+
+.footer-logo {
+    flex-shrink: 0; /* Evita que el logotip es redueixi */
+    margin-left: 0; /* Logotip completament a l'esquerra */
+    padding: 0; /* Elimina qualsevol padding */
+}
+
+
+
+
+.footer-logo img {
+    max-height: 20px; /* Ajusta la mida del logotip */
+    display: block;
+}
+
+
+
+
+/* Navegació */
+.footer-nav {
+    margin-left: auto; /* Envia els enllaços completament a la dreta */
+    display: flex;
+    gap: 15px; /* Espai uniforme entre enllaços */
+}
+
+
+
+
+.footer-nav a {
+    color: rgb(255, 255, 255); /* Text blanc */
+    text-decoration: none; /* Sense subratllat */
+    font-size: 0.9rem; /* Mida compacta */
+}
+
+
+
+
+.footer-nav a:hover {
+    color: rgb(64, 195, 130); /* Canvi a verd en hover */
+}
+
+
+
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: left; /* Manté el text alineat a l'esquerra */
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: rgb(255, 255, 255); /* Text blanc */
+    padding-left: 50px; /* Espai per alinear-se amb el contingut */
+}
+
+
+
+
+.footer-icons {
+    display: flex; /* Col·loca els icones en línia */
+    justify-content: flex-end; /* Alinea els icones a la dreta */
+    gap: 15px; /* Espai entre els icones */
+    margin-bottom: 10px;
+    height: auto; /* Evita que el contenidor amagui els icones */
+    overflow: visible;
+}
+
+
+
+
+.footer-icons a img {
+    width: 24px; /* Mida fixa dels icones */
+    height: 24px;
+    display: inline-block; /* Assegura que es mostrin correctament */
+    filter: invert(100%); /* Fa els icones blancs sobre fons negre */
+    transition: opacity 0.3s ease; /* Transició suau per hover */
+    visibility: visible; /* Assegura la visibilitat */
+    opacity: 1; /* Assegura que no són transparents */
+}
+
+
+
+
+.footer-icons a:hover img {
+    opacity: 0.7; /* Canvi d'opacitat en hover */
+}
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: flex-end; /* Alinea els enllaços a la dreta */
+    align-items: center;
+    gap: 10px; /* Espai entre enllaços i separadors */
+}
+
+
+
+
+.footer-links a {
+    color: rgb(255, 255, 255); /* Text blanc */
+    text-decoration: none; /* Sense subratllat */
+    font-size: 0.9rem; /* Mida compacta */
+}
+
+
+
+
+.footer-links a:hover {
+    color: rgb(64, 195, 130); /* Canvi a verd en hover */
+}
+
+
+
+
+/* Separador entre enllaços */
+.footer-links .separator {
+    color: rgb(255, 255, 255); /* Línies blanques */
+    font-size: 0.9rem;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.alegreya-sans-regular {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+  .alegreya-sans-bold {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+ 
+  .alegreya-sans-regular-italic {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+ 
+  .alegreya-sans-bold-italic {
+    font-family: "Alegreya Sans", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+
+
+  .topic-hero {
+    background-color: rgb(242, 242, 230);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+
+
+
+.topic-hero .highlight {
+    background-color: rgb(64, 195, 130); /* Color verd */
+    color: white; /* Text en blanc */
+    padding: 0px 5px; /* Espai intern uniforme */
+    border-radius: 0 /* Cantonades puntiagudes amb alta especificitat */
+}
+
+
+
+
+
+.topic-hero h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+
+
+.topic-main {
+display: flex; /* Flexbox per alinear menú i contingut */ gap: 20px; /* Espai entre menú i contingut */ }
+
+
+
+
+/* Tema del mes - Navigation Menu */
+.topic-menu {
+    background-color: rgb(242, 242, 230);
+    padding: 10px 20px;
+    text-align: center;
+flex: 0 0 200px;
+    padding: 20px;
+    width: 150px;
+
+
+}
+
+
+.topic-menu ul li {
+    margin-bottom: 10px; /* Espai entre els elements del menú */
+}
+
+
+
+
+.topic-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    display: block;
+    list-style-type: none;
+    top: -10px;
+}
+
+
+
+
+.topic-menu li {
+    margin-bottom: 3px; /* Espai entre elements del menú */
+    font-size: 0.9rem;
+    line-height: 0.8;
+}
+
+
+
+
+
+
+
+
+.topic-menu ul li a:hover {
+    color: rgb(64, 195, 130); /* Verd en hover */
+    background-color: rgba(64, 195, 130, 0.1); /* Fons verd clar en hover */
+}
+
+
+
+
+
+
+
+.topic-content article {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+
+
+.topic-content article img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.topic-content article h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+
+
+
+.topic-content article p {
+    margin: 5px 0;
+}
+
+
+
+
+.topic-content article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+
+
+
+.topic-content article a:hover {
+    background-color: rgb(64, 195, 130);
+    color: white;
+}
+
+
+
+
+.stories-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 30px; /* Space between cards */
+}
+
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Center pagination */
+    margin-top: 20px; /* Space above pagination */
+}
+
+
+
+
+.page-link {
+    margin: 0 5px; /* Space between page links */
+    padding: 5px 10px; /* Padding for page links */
+    color: rgb(0, 0, 0); /* Black text */
+    text-decoration: none; /* No underline */
+    border: 1px solid transparent; /* Transparent border */
+    transition: all 0.2s; /* Smooth transition for hover */
+}
+
+
+
+
+.page-link:hover,
+.page-link:focus {
+    border-color: rgb(0, 0, 0); /* Black border on hover/focus */
+}
+
+
+
+
+.page-link.active {
+    background-color: rgb(64, 195, 130); /* Active link background */
+    color: white; /* Active link text color */
+    border-color: rgb(64, 195, 130); /* Active link border */
+}
+
+
+/* Títol i estat de conservació */
+.title-block {
+    margin-bottom: 15px; /* Espai entre el títol/estat i la resta */
+}
+
+
+.title-column h2 {
+    font-size: 35px; /* Mida més gran per al número */
+    font-weight: bold; /* Text en negreta per destacar */
+    margin: 0; /* Elimina espai extra */
+    line-height: 1;
+}
+
+.title-column h3 {
+    font-size: 22px; /* Mida més gran per al nom de l'animal */
+    font-weight: bold; /* Text en negreta per destacar */
+    margin: 0; /* Elimina marges superiors i inferiors */
+    line-height: 1.1;
+}
+
+.title-column p {
+    font-size: 12px; /* Mida estàndard per a altres textos */
+    margin-bottom: 2px; /* Redueix l'espai entre línies */
+    margin: 0; /* Elimina marges superiors i inferiors */
+    line-height: 1;
+}
+
+.description-column {
+    text-align: left;
+}
+
+.description-column a {
+    color: black; /* Enllaços negres a la quarta columna */
+    text-decoration: underline; /* Afegir subratllat */
+}
+
+.description-column a:hover {
+    color: rgb(64, 195, 130); /* Verd en hover */
+    text-decoration: underline; /* Manté el subratllat en hover */
+}
+
+
+.title-block h3 {
+    font-size: 1.8rem; /* Proporció adequada per al títol */
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.title-block .status {
+    font-size: 1.2rem; /* Mida per al text de l'estat */
+    font-style: italic; /* Estil cursiva */
+    color: rgb(0, 0, 0); /* Color negre */
+    margin: 5px 0 0; /* Petit espai entre títol i estat */
+}
+
+
+/* Contingut de l'animal */
+.animal-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+
+.animal-description {
+    flex: 2;
+    text-align: left;
+}
+
+
+.animal-details figure {
+    text-align: center; /* Centra la imatge i el peu de foto */
+    margin: 0;
+}
+
+
+.animal-details figcaption {
+    font-size: 0.85rem; /* Redueix lleugerament la mida del text del peu */
+    color: rgb(0, 0, 0);
+    line-height: 1.4;
+}
+
+
+.animal-details figcaption a {
+    color: rgb(0, 0, 0); /* Enllaç negre */
+    text-decoration: underline; /* Subratllat per indicar enllaç */
+}
+
+
+.animal-details figcaption a:hover {
+    color: rgb(64, 195, 130); /* Canvia a verd en passar el ratolí */
+}
+
+
+.animal-details img {
+    max-width: 250px; /* Amplada màxima */
+    height: auto; /* Manté la proporció */
+    border: 1px solid rgb(0, 0, 0); /* Borde negre */
+}
+
+
+.animal-details .description {
+    flex: 1; /* La descripció ocupa l'espai restant */
+    line-height: 1.6; /* Millora la llegibilitat */
+}
+
+
+.animal-details .description p {
+    line-height: 1.6; /* Millora la llegibilitat */
+    margin-bottom: 10px; /* Espai sota el text */
+}
+
+
+.animal-details .read-more {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+
+.animal-details .read-more:hover {
+    background-color: rgb(64, 195, 130);
+    color: white;
+}
+
+
+.animal-info {
+    flex: 1;
+    padding: 10px 20px; /* Redueix el padding per donar més espai */
+    max-width: 60%; /* Limita l'ample del text */
+}
+
+
+.animal-image-container {
+    flex: 1;
+    text-align: center;
+    max-width: 35%; /* Assegura que hi hagi espai suficient per a la imatge */
+}
+
+
+.animal-image-container img {
+    max-width: 270%; /* Ajusta la mida de la imatge */
+    height: auto; /* Conserva les proporcions */
+    margin-bottom: 10px;
+    border: 10px solid white; /* Marc blanc més gruixut */
+    display: block;
+    margin: 0 auto;
+}
+
+
+.animal-image-caption {
+    white-space: normal; /* Permet que el text es trenqui en múltiples línies si és necessari */
+    overflow: visible; /* Assegura que tot el text sigui visible */
+    text-align: center; /* Centra el text sota la imatge */
+    font-size: 0.8rem; /* Ajust de mida del text per a una millor visibilitat */
+    margin: 5px auto 0 auto; /* Redueix el marge i centra verticalment sota la imatge */
+    display: inline-block; /* Ajusta l'alineació perquè s'adapti a l'ample disponible */
+}
+
+
+
+
+.animal-block h3 {
+    font-size: 1.6rem; /* Mida del títol */
+    font-weight: bold;
+    margin-bottom: 5px; /* Espai sota el títol */
+}
+
+
+.animal-block .status {
+    font-size: 1.2rem; /* Proporció adequada per al text */
+    font-style: italic; /* Destaquem l'estil de l'estat */
+    color: rgb(0, 0, 0); /* Text negre */
+    margin-bottom: 15px; /* Espai sota l'estat */
+}
+
+.animal-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* Número, imatge, text */
+    gap: 20px; /* Espai entre columnes */
+    align-items: start; /* Assegura l'alineació superior */
+}
+
+
+.animal-info h2, .animal-info h3, .animal-info p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+  /* Media query per tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajustar marges generals */
+    body {
+        padding: 20px;
+    }
+
+
+
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between; /* Menu i logotip separats */
+        align-items: center;
+    }
+
+
+
+
+    header nav {
+        display: flex;
+        gap: 15px;
+    }
+
+
+
+
+    .hero {
+        height: 250px; /* Redueix l'alçada */
+    }
+   
+
+
+
+
+    /* Secció "Què és Naturae Hub?" */
+    .main-section {
+        display: flex;
+        flex-direction: column; /* Contingut apilat verticalment */
+        gap: 20px; /* Espai entre les columnes */
+    }
+
+
+
+
+    .main-section .form-container {
+        width: 100%; /* Formulari ocupa tota l'amplada */
+    }
+
+
+
+
+    /* Secció "Històries de canvi" */
+    .stories-cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Columnes simples */
+        gap: 20px; /* Espai entre els quadrats */
+    }
+
+
+
+
+    .stories-cards .card {
+        padding: 15px; /* Redueix padding per fer-los més compactes */
+    }
+
+
+
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column; /* Contingut apilat */
+        align-items: center; /* Centrat */
+        gap: 20px;
+    }
+
+
+
+
+    .footer-icons {
+        justify-content: center; /* Icones centrades */
+        gap: 15px;
+    }
+
+
+
+
+    .footer-links {
+        justify-content: center; /* Enllaços centrats */
+    }
+
+
+
+
+    .footer-bottom {
+        text-align: center; /* Text centrat */
+    }
+
+}

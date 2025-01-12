@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturae Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Domine:wght@400..700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="home">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logotip.svg" alt="Logotip de Naturae Hub">
+        </a>
+        <nav class="nav">
+            <a href="tema-del-mes.html">Tema del Mes</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero-image-home.jpg" alt="Paisatge verd amb muntanyes" class="hero-image">
+            <div class="hero-text">
+                <h1 class="alegreya-title">Naturae Hub</h1>
+                <p class="alegreya-subtitle">Un espai per als defensors del medi ambient</p>
+            </div>
+        </section>
+
+        <section class="about container">
+            <div class="about-text">
+                <h2 class="alegreya-heading">Què és Naturae Hub?</h2>
+                <p class="alegreya-paragraph"><strong>Naturae Hub</strong> és un espai digital on la bellesa i el poder de l'entorn natural es volen trobar amb l'acció, l'aprenentatge i la consciència ambiental.</p>
+                <p class="alegreya-paragraph">Inspirar i educar és el que persegueix <strong>Naturae Hub</strong>, perquè les persones han de viure d'acord amb la natura.</p>
+            </div>
+
+            <form class="subscribe-form" action="" method="POST">
+                <p class="alegreya-paragraph">Sigues part del canvi, <b>subscriu-te a la nostra newsletter.</b></p>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="email">Correu electrònic</label>
+                <input type="email" id="email" name="email" required>
+                
+                <p class="privacy-message">
+                    Abans d'enviar les teves dades, consulta la nostra <a href="#" class="privacy-link">política de privacitat</a>.
+                </p>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="accept" name="accept" required>
+                    <label for="accept">He llegit i accepto la política de privacitat</label>
+                </div>
+                
+                <button type="submit">Subscriu-me</button>
+            </form>
+
+        </section>
+
+        <section class="stories container">
+            <h2 class="alegreya-heading">Històries de canvi</h2>
+            <p class="alegreya-paragraph">Històries de persones i comunitats que amb les seves iniciatives estan marcant la diferència en la protecció i la conservació del medi ambient. Si coneixes altres històries o ets el seu protagonista, explica'ns-ho.</p>
+            <div class="stories-cards">
+                <div class="card">
+                    <h3 class="alegreya-heading">Creant boscos urbans</h3>
+                    <p class="alegreya-paragraph">Un grup d'estudiants va decidir plantar arbres a terrenys descurats de la seva ciutat; volien transformar àrees grises i insalubres en pulmons verds...</p>
+                    <a href="#">Saber-ne més</a>
+                </div>
+                <div class="card">
+                    <h3 class="alegreya-heading">Un refugi per a les abelles</h3>
+                    <p class="alegreya-paragraph">Els veïns de Vallrosada han decidit enfrontar-se a la disminució de les abelles...</p>
+                    <a href="#">Saber-ne més</a>
+                </div>
+                <div class="card">
+                    <h3 class="alegreya-heading">Convertir un riu en un oasi de vida</h3>
+                    <p class="alegreya-paragraph">El seu riu havia estat devastat per la contaminació. La determinació de tot el poble ha aconseguit rescatar-lo...</p>
+                    <a href="#">Saber-ne més</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logotip-n.svg" alt="Logotip Naturae Hub">
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-icons">
+                    <a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
+                    <a href="#" target="_blank"><img src="images/youtube.svg" alt="youTube"></a>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Política de privacitat</a>
+                    <span class="separator">|</span>
+                    <a href="#">Política de cookies</a>
+                    <span class="separator">|</span>
+                    <a href="#">Avís legal</a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>2024-2025. Carlota Berges Masso</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
+
